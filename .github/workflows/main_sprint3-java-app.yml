@@ -24,12 +24,15 @@ jobs:
           java-version: '17'
           distribution: 'microsoft'
           
+      - name: Grant execute permission for Gradle Wrapper
+        run: chmod +x ./gradlew
+
       - name: Build with Gradle
         env:
           SPRING_DATASOURCE_URL: ${{ secrets.SPRING_DATASOURCE_URL }}
           SPRING_DATASOURCE_USERNAME: ${{ secrets.SPRING_DATASOURCE_USERNAME }}
           SPRING_DATASOURCE_PASSWORD: ${{ secrets.SPRING_DATASOURCE_PASSWORD }}
-        run: ./gradlew clean build --no-daemon
+        run: ./gradlew clean build --no-daemon
 
           
 
@@ -71,4 +74,5 @@ jobs:
           package: '*.jar'
 
           
+
 
