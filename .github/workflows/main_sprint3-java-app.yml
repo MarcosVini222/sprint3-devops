@@ -32,18 +32,7 @@ jobs:
           SPRING_DATASOURCE_URL: ${{ secrets.SPRING_DATASOURCE_URL }}
           SPRING_DATASOURCE_USERNAME: ${{ secrets.SPRING_DATASOURCE_USERNAME }}
           SPRING_DATASOURCE_PASSWORD: ${{ secrets.SPRING_DATASOURCE_PASSWORD }}
-        run: ./gradlew build --no-daemon
-
-          
-
-      - name: Build with Maven
-        run: mvn clean install
-
-      - name: Upload artifact for deployment job
-        uses: actions/upload-artifact@v4
-        with:
-          name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+        run: ./gradlew build --no-daemon
 
   deploy:
     runs-on: ubuntu-latest
@@ -74,6 +63,7 @@ jobs:
           package: '*.jar'
 
           
+
 
 
 
