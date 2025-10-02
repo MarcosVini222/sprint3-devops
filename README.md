@@ -53,6 +53,9 @@ Este projeto tem como objetivo o desenvolvimento de uma API RESTful em **Java co
 
 ---
 
+<img width="1120" height="679" alt="image" src="https://github.com/user-attachments/assets/2ba51c18-2bd0-4a29-888a-11778f19caed" />
+
+
 ## 👨‍💻 Integrantes
 
 - **Heitor Ortega** – RM557825  
